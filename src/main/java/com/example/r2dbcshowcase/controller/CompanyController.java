@@ -27,6 +27,7 @@ public class CompanyController {
         this.companyService = companyService;
     }
 
+    // Showcase for RSocket streaming
     @MessageMapping("allCompanies")
     public Flux<CompanySimpleDto> allCompanies() {
         LOGGER.info("Listing all companies...");
