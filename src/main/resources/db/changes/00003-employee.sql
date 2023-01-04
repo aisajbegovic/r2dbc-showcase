@@ -1,13 +1,16 @@
-create table employee (
-                          id VARCHAR(40),
-                          first_name VARCHAR(50),
-                          last_name VARCHAR(50),
-                          email VARCHAR(50),
-                          gender VARCHAR(50),
-                          title VARCHAR(50),
-                          office VARCHAR(40),
-                          start_date DATE
+create table employee
+(
+    id         uuid,
+    first_name varchar(50),
+    last_name  varchar(50),
+    email      varchar(50),
+    gender     varchar(50),
+    title      varchar(50),
+    office     uuid,
+    start_date date
 );
+
+
 insert into employee (id, first_name, last_name, email, gender, title, office, start_date) values ('ae970f4d-fe86-473a-bd01-fc752c5f2342', 'Pansie', 'Hof', 'phof0@uol.com.br', 'Female', 'Marketing Manager', 'd82a183b-95f4-43ba-885b-584d56773e67', null);
 insert into employee (id, first_name, last_name, email, gender, title, office, start_date) values ('8128bdec-9ea4-4dc0-ae78-3f2500bd03cc', 'Jobina', 'Ryding', 'jryding1@soup.io', 'Female', 'Help Desk Technician', '8d673fa1-4fb2-4e17-a44f-b1181d98f2db', '2021-10-27');
 insert into employee (id, first_name, last_name, email, gender, title, office, start_date) values ('9b29508b-3e2e-4486-9c6e-3af9b938408f', 'Calvin', 'Howatt', 'chowatt2@engadget.com', 'Male', 'Senior Developer', 'ce108834-1d63-47b2-bff3-e0d370689bfc', '2020-07-31');

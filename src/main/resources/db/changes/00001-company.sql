@@ -1,10 +1,12 @@
-create table company (
-                         id VARCHAR(40),
-                         name VARCHAR(200),
-                         hq_address VARCHAR(1000),
-                         hq_email VARCHAR(100),
-                         web_home_page VARCHAR(100)
+create table company
+(
+    id            uuid,
+    name          varchar(200),
+    hq_address    varchar(1000),
+    hq_email      varchar(100),
+    web_home_page varchar(100)
 );
+
 insert into company (id, name, hq_address, hq_email, web_home_page) values ('20caafb8-4ddf-467c-a7cf-5e60474129a4', 'Metz, Sporer and Renner', '13662 Mallory Circle', 'svoff0@addtoany.com', '129.95.58.141');
 insert into company (id, name, hq_address, hq_email, web_home_page) values ('d43bb214-f32b-4a7f-81d9-e2532d894aea', 'Schumm and Sons', '85 Warrior Point', 'dboag1@msn.com', '243.168.229.37');
 insert into company (id, name, hq_address, hq_email, web_home_page) values ('8cb7609f-361a-432f-a84b-41553f7142ba', 'Luettgen and Sons', '871 Derek Lane', 'ashipley2@jimdo.com', '214.249.133.22');

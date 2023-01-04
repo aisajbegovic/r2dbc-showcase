@@ -1,10 +1,13 @@
 package com.example.r2dbcshowcase.model;
 
-import jakarta.persistence.Id;
+import jakarta.persistence.FetchType;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 import java.util.UUID;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 
 public class Company {
@@ -17,6 +20,22 @@ public class Company {
     private String email;
     @Column("web_home_page")
     private String homePage;
+
+    private List<Office> officeList = new ArrayList<>(3);
+
+    public List<Office> getOfficeList() {
+        return officeList;
+    }
+
+    public Company setOfficeList(List<Office> officeList) {
+        this.officeList = officeList;
+        return this;
+    }
+
+    public Company addOffice(Office office) {
+        officeList.add(office);
+        return this;
+    }
 
     public UUID getId() {
         return id;
@@ -84,6 +103,7 @@ public class Company {
                 ", address='" + address + '\'' +
                 ", email='" + email + '\'' +
                 ", homePage='" + homePage + '\'' +
+                ", officeList=" + officeList +
                 '}';
     }
 }
